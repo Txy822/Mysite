@@ -1,3 +1,3 @@
 # my-first-project
-intial project
-This about web app development as abeginner. 
+
+This is about web app development as abeginner. 
