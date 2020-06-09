@@ -61,8 +61,3 @@ def post_remove(request, pk):
     return redirect('post_list')
     
 
-"""
-This is a comment
-written in
-more than just one line
-"""
