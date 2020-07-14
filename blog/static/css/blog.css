@@ -111,6 +111,8 @@ h1 {
 #logo {
    padding: 10px;
    float: left;
+   width: 10px;
+   height: 10px;
 }
 #top_menu {
    float: right;
