@@ -109,10 +109,10 @@ h1 {
    padding-right: 10px;
 }
 #logo {
-   padding: 0px;
+   /* padding: 0px;
    float: left;
    width: 10px;
-   height: 10px;
+   height: 10px; */
 }
 #top_menu {
    float: right;
