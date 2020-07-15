@@ -25,7 +25,8 @@ SECRET_KEY = ')it033e(()zzz^($mus76kn*8zup52t%h$mfttrtc39nldhtu%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+#ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com','http://localhost:8000','563ae936.ngrok.io', 'localhost', '127.0.0.1', 'testserver']
 
 
 # Application definition
