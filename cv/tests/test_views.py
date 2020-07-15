@@ -1,5 +1,5 @@
 from django.test import TestCase,Client
-from django.urls import reverse
+from django.urls import reverse,resolve
 from cv.views import cv_section_list
 
 class TestViews(TestCase):
