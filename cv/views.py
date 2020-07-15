@@ -3,4 +3,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def cv_section_list(request):
-    return HttpResponse('<html><title>Curriculun vitae(CV)</title></html>')
+    return HttpResponse('<html><title>Tesfahun Curriculum Vitae</title></html>')
