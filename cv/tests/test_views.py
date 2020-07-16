@@ -14,5 +14,5 @@ class TestViews(TestCase):
         response = cv_section_list(request)
         html = response.content.decode('utf8')
         self.assertTrue(html.startswith('<html>'))
-        self.assertIn('<title>To-Do lists</title>', html)
+        self.assertIn('<title>Tesfahun Curriculum Vitae</title>', html)
         self.assertTrue(html.endswith('</html>'))
