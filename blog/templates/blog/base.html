@@ -13,8 +13,8 @@
     <body>
         <div class="page-header">
 		{% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+            <a href="{% url 'post_new' %}" target="_blank" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'post_draft_list' %}" target="_blank" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
 
         {% endif %}
         <header id="header">
@@ -26,8 +26,8 @@
           <!-- <div id="topbanner"><img src="{% static 'css/top_banner.png' %" alt="" /></div> -->
         </header>
         <hr>
-            <h1><a href="/">Personal Blogs</a></h1>
-            <h3><a href="/">|Home </a><a href="/cv/">|Curriculum Vitae(CV) | </a><a href="/admin/">Login as Admin | </a></h3>
+            <h1><a href="/" target="_blank">Personal Blogs</a></h1>
+            <h3><a href="/" target="_blank" > |Home </a><a href="/cv/" target="_blank">|Curriculum Vitae(CV) | </a><a href="/admin/" target="_blank" >Login as Admin | </a></h3>
             <!-- <h3><a href="/">|Home | </a><a href="/admin/">Login as Admin | </a></h3> -->
          <hr>
         </div>
