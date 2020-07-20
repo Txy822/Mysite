@@ -6,13 +6,13 @@ class FunctionalTestCase(TestCase):
     #set up data for class based elements
     @classmethod
     def setUpTestData(cls):
-        print("setUpTestData: Run once to set up non-modified data for all class methods.")
+        #print("setUpTestData: Run once to set up non-modified data for all class methods.")
         pass
 
     #set up  is going to run before each method
     def setUp(self):
         self.browser = webdriver.Firefox()
-        
+
     #testthe existence of  cv page  status code
     def test_cv_page(self):
         response = self.client.get('/cv')
@@ -25,7 +25,7 @@ class FunctionalTestCase(TestCase):
 
     # test there is cv page
     def test_there_is_cv_page(self):
-        self.browser.get('http://localhost:8000/cv')
+        self.browser.get('http://localhost:8000/')
         self.assertIn('Curriculum Vitae(CV)',self.browser.page_source)
 
     #tear down  is going to run after  each method
