@@ -2426,3 +2426,33 @@ console.warn: services.settings: main/whats-new-panel sync interrupted by shutdo
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1595265590391	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofileHf3kd1"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1595265593304	Marionette	INFO	Listening on port 63836
+1595265593548	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595265593636	Marionette	INFO	Stopped listening on port 63836
+console.error: services.settings: 
+  main/cfr Signature failed  TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1595265597852	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofileJMRPLh"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1595265600763	Marionette	INFO	Listening on port 63877
+1595265601042	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595265602352	Marionette	INFO	Stopped listening on port 63877
+console.warn: services.settings: main/whats-new-panel sync interrupted by shutdown
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1595265606434	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofileyq1uTl"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1595265609395	Marionette	INFO	Listening on port 63926
+1595265609637	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595265610144	Marionette	INFO	Stopped listening on port 63926
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
