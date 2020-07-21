@@ -13,7 +13,7 @@ class FunctionalTestCase(TestCase):
     def setUp(self):
         self.browser = webdriver.Firefox()
 
-    #testthe existence of  cv page  status code
+    #test the existence of  cv page  status code
     def test_cv_page(self):
         response = self.client.get('/cv')
         self.assertEqual(response.status_code, 301)
@@ -23,7 +23,7 @@ class FunctionalTestCase(TestCase):
         self.browser.get('http://localhost:8000/cv')
         self.assertIn('Tesfahun Curriculum Vitae',self.browser.title)
 
-    # test there is cv page
+    # test there is cv page icon to be clicked on my blog
     def test_there_is_cv_page(self):
         self.browser.get('http://localhost:8000/')
         self.assertIn('Curriculum Vitae(CV)',self.browser.page_source)
