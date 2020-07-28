@@ -8,7 +8,9 @@
                 {{ post.published_date }}
             </div>
             <h2><a href="{% url 'post_detail' pk=post.pk %}" target="_blank">{{ post.title }}</a></h2>
-            <p>{{ post.snippet|linebreaksbr }}</p>
+            <p>{{ post.snippet|linebreaksbr }}
+            <a href="{% url 'post_detail' pk=post.pk %}" target="_blank">Read More</a>
+            </p>
         </div>
     {% endfor %}
 {% endblock %}
