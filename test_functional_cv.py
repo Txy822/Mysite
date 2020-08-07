@@ -13,7 +13,13 @@ class FunctionalTestCase(TestCase):
     def setUp(self):
         self.browser = webdriver.Firefox()
 
-   # Recruiter wants is looking employees and need to see cv.
+   # Recruiter  is looking employees and need to see cv.
+   #He opens the blog post section and found cv page icon
+   # test there is cv page icon to be clicked on my blog
+   def test_there_is_cv_page(self):
+       self.browser.get('http://localhost:8000/')
+       self.assertIn('Curriculum Vitae(CV)',self.browser.page_source)
+    #He opened the cv and can see different sections of cv
     #test the existence of  cv page  status code
     def test_cv_page(self):
         response = self.client.get('/cv')
@@ -25,11 +31,18 @@ class FunctionalTestCase(TestCase):
         self.browser.get('http://localhost:8000/cv')
         self.assertIn('Tesfahun Curriculum Vitae',self.browser.title)
 
-    # test there is cv page icon to be clicked on my blog
-    def test_there_is_cv_page(self):
-        self.browser.get('http://localhost:8000/')
-        self.assertIn('Curriculum Vitae(CV)',self.browser.page_source)
+    # She is invited to enter a to-do item straight away
+    #when he click each section he can read more
+    # He checked each sections of cv like Experiance, Education background and others
 
+    # He clicked the Curriculum Vitae icon and he goes back.
+
+    # The page updates again, and now shows both items on her list
+
+    # When he hit personal blog he can see the blog posts as well.
+
+    # He gets  more works about the employee
+    # He get back to other office works
     #tear down  is going to run after  each method
     def tearDown(self):
         self.browser.quit()
