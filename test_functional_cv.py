@@ -13,11 +13,13 @@ class FunctionalTestCase(TestCase):
     def setUp(self):
         self.browser = webdriver.Firefox()
 
+   # Recruiter wants is looking employees and need to see cv.
     #test the existence of  cv page  status code
     def test_cv_page(self):
         response = self.client.get('/cv')
         self.assertEqual(response.status_code, 301)
 
+    # He notices the cv page title and header mention Tesfahun Curriculum Vitae
     # test  there is cv page title
     def test_title_cv_page(self):
         self.browser.get('http://localhost:8000/cv')
