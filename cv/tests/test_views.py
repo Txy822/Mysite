@@ -8,10 +8,18 @@ from django.template.loader import render_to_string
 
 
 class TestViews(TestCase):
+    def setUp(self):
+        self.client=Client()
+        self.cv_section_list_url=reverse('cv_section_list')
 
     def test_url_resolves_to_cv_page_view(self):
         found = resolve('/cv/')
         self.assertEqual(found.func, cv_section_list)
+
+    def test_cv_section_list_GET(self):
+        response=self.client.get(self.cv_section_list_url)
+        self.assertEquals(response.status_code,200)
+        self.assertTemplateUsed(response,'cv/cv_section_list.html')
 
     def test_cv_page_returns_correct_html(self):
         response = self.client.get('/cv/')
