@@ -1,8 +1,8 @@
-from django.test import TestCase,Client
+from django.test import LiveServerTestCase,Client
 from selenium import webdriver
 import unittest
 
-class FunctionalTestCase(TestCase):
+class FunctionalTestCase(LiveServerTestCase):
     #set up data for class based elements
     @classmethod
     def setUpTestData(cls):
@@ -16,8 +16,9 @@ class FunctionalTestCase(TestCase):
    # Recruiter  is looking employees and need to see cv.
    #He opens the blog post section and found cv page icon
    # test there is cv page icon to be clicked on my blog
-   def test_there_is_cv_page(self):
-       self.browser.get('http://localhost:8000/')
+    def test_there_is_cv_page(self):
+
+       self.browser.get(self.live_server_url)
        self.assertIn('Curriculum Vitae(CV)',self.browser.page_source)
     #He opened the cv and can see different sections of cv
     #test the existence of  cv page  status code
@@ -28,7 +29,7 @@ class FunctionalTestCase(TestCase):
     # He notices the cv page title and header mention Tesfahun Curriculum Vitae
     # test  there is cv page title
     def test_title_cv_page(self):
-        self.browser.get('http://localhost:8000/cv')
+        self.browser.get('%s%s' % (self.live_server_url, '/cv/'))
         self.assertIn('Tesfahun Curriculum Vitae',self.browser.title)
 
     # She is invited to enter a to-do item straight away
