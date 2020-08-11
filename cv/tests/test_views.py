@@ -1,10 +1,6 @@
 from django.test import TestCase,Client
-from django.urls import reverse,resolve
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.http import HttpResponse, Http404
-from cv.views import cv_section_list
-from django.template.loader import render_to_string
+from django.urls import reverse
+from cv.models import Cv_section
 
 
 class TestViews(TestCase):
@@ -12,6 +8,12 @@ class TestViews(TestCase):
         self.client=Client()
         self.cv_section_list_url=reverse('cv_section_list')
         self.cv_section_detail_url=reverse('cv_section_detail',args=[1])
+
+        Cv_section.objects.create(
+        title='title',
+        text='my text'
+        )
+
 
     def test_url_resolves_to_cv_page_view(self):
         found = resolve('/cv/')

@@ -15,4 +15,15 @@ def cv_section_list(request):
 
 def cv_section_detail(request, pk):
     cv_section = get_object_or_404(Cv_section, pk=pk)
-    return render(request, 'cv/cv_section_detail.html', {'cv_section': cv_section})
+    return render(request, 'cv/cv_section_detail.html', {'cv_section_detail': cv_section})
+
+def cv_section_new(request):
+    if request.method == "POST":
+        form = Cv_section_form(request.POST)
+        if form.is_valid():
+            cv_section = form.save(commit=False)
+            cv_section.save()
+            return redirect('cv_section_detail', pk=cv_section.pk)
+    else:
+        form = Cv_section_form()
+    return render(request, 'cv/cv_section_edit.html', {'form': form})
