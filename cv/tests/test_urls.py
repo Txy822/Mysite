@@ -1,6 +1,6 @@
-from django.test i e
+from django.test import TestCase
 from django.urls import reverse,resolve
-from cv.views import cv_section_list,cv_section_detail
+from cv.views import cv_section_list,cv_section_detail,cv_section_new,cv_section_edit
 from cv.models import Cv_section
 
 
