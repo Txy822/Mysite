@@ -1,6 +1,9 @@
 from django.test import TestCase,Client
-from django.urls import reverse
+from django.urls import reverse,resolve
 from cv.models import Cv_section
+from django.shortcuts import render
+from django.http import HttpResponse, Http404
+from django.template.loader import render_to_string
 
 
 class TestViews(TestCase):
