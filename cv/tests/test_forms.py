@@ -11,3 +11,7 @@ class CvSectionFormTest(TestCase):
         })
 
         self.assertTrue(form.is_valid())
+    def test_cv_section_form_no_data(self):
+        form=Cv_section_form(data={})
+        self.assertFalse(form.is_valid())
+        self.assertEquals(len(form.errors),2)
