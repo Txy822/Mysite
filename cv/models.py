@@ -10,8 +10,9 @@ class Cv_section(models.Model):
 
     def __str__(self):
         return self.title
-# Create your models here.
- # The rest of our model code
+
+    def snippet(self):
+        return self.text[:56]+'.....'
 
     class Meta:
         verbose_name_plural = "cv_sections"

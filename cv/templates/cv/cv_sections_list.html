@@ -5,7 +5,9 @@
         <div class="cv">
 
             <h2><a href="{% url 'cv_section_detail' pk=cv.pk %}">{{ cv.title }}</a></h2>
-            <p>{{ cv.text|linebreaksbr }}</p>
+            <p>{{ cv.snippet|linebreaksbr }}
+              <a href="{% url 'cv_section_detail' pk=cv.pk %}" target="_blank">Read More</a>
+            </p>
         </div>
     {% endfor %}
 {% endblock %}
