@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import Cv_section
 
-# Register your models here.
+admin.site.register(Cv_section)

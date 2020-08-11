@@ -9,5 +9,5 @@ from django.shortcuts import redirect
 # Create your views here.
 
 def cv_section_list(request):
-    cv_sections = Cv_section.objects.all()
-    return render(request, 'cv/cv_section_list.html', {'cv_sections': cv_sections})
+    # cv_sections = Cv_section.objects.all()
+    return render(request, 'cv/cv_sections_list.html', {})
