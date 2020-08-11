@@ -11,6 +11,7 @@ class TestViews(TestCase):
     def setUp(self):
         self.client=Client()
         self.cv_section_list_url=reverse('cv_section_list')
+        self.cv_section_detail_url=reverse('cv_section_detail',args=[1])
 
     def test_url_resolves_to_cv_page_view(self):
         found = resolve('/cv/')
@@ -20,6 +21,14 @@ class TestViews(TestCase):
         response=self.client.get(self.cv_section_list_url)
         self.assertEquals(response.status_code,200)
         self.assertTemplateUsed(response,'cv/cv_sections_list.html')
+    def test_cv_section_detail_GET(self):
+        response=self.client.get(self.cv_section_detail_url)
+        self.assertEquals(response.status_code,200)
+        self.assertTemplateUsed(response,'cv/cv_section_detail.html')
+
+    def test_uses_correct_template(self):
+        response = self.client.get('/cv/')
+        self.assertTemplateUsed(response, 'cv/cv_sections_list.html')
 
     # def test_cv_page_returns_correct_html(self):
     #     response = self.client.get('/cv/')
@@ -29,7 +38,3 @@ class TestViews(TestCase):
     #     self.assertTrue(html.strip().endswith('</html>'))
     #     expected_html = render_to_string('cv/cv_sections_list.html')
     #     self.assertEqual(html, expected_html)
-
-    def test_uses_correct_template(self):
-        response = self.client.get('/cv/')
-        self.assertTemplateUsed(response, 'cv/cv_sections_list.html')
