@@ -42,3 +42,8 @@ def cv_section_edit(request, pk):
     else:
         form = Cv_section_form(instance=cv_section)
     return render(request, 'cv/cv_section_edit.html', {'form': form})
+
+def cv_section_remove(request, pk):
+    cv_section = get_object_or_404(Cv_section, pk=pk)
+    cv_section.delete()
+    return redirect('cv_section_list')
