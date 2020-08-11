@@ -14,7 +14,11 @@ class TestUrls(TestCase):
     def test_cv_section_detail_url_resolveded(self):
         url=reverse('cv_section_detail',args=[1])
         self.assertEqual(resolve(url).func,cv_section_detail)
-        
+
     def test_cv_section_new_url_resolveded(self):
         url=reverse('cv_section_new')
         self.assertEqual(resolve(url).func,cv_section_new)
+
+    def test_cv_section_edit_url_resolveded(self):
+        url=reverse('cv_section_edit',args=[1])
+        self.assertEqual(resolve(url).func,cv_section_edit)
