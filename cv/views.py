@@ -17,6 +17,7 @@ def cv_section_detail(request, pk):
     cv_section = get_object_or_404(Cv_section, pk=pk)
     return render(request, 'cv/cv_section_detail.html', {'cv_section_detail': cv_section})
 
+#new cv section view function
 def cv_section_new(request):
     if request.method == "POST":
         form = Cv_section_form(request.POST)
