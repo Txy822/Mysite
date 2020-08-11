@@ -13,6 +13,7 @@ class TestViews(TestCase):
         self.cv_section_detail_url=reverse('cv_section_detail',args=[1])
         self.cv_section_new_url=reverse('cv_section_new')
         self.cv_section_edit_url=reverse('cv_section_edit',args=[1])
+        self.cv_section_remove_url=reverse('cv_section_remove',args=[1])
 
         Cv_section.objects.create(
         title='title',
