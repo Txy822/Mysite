@@ -36,6 +36,11 @@ class TestViews(TestCase):
         response=self.client.get(self.cv_section_new_url)
         self.assertIn('title', response.content.decode())
         self.assertEquals(response.status_code,200)
+        
+    def test_cv_section_edit_GET(self):
+        response=self.client.get(self.cv_section_edit_url)
+        self.assertEquals(response.status_code,200)
+        self.assertTemplateUsed(response,'cv/cv_section_edit.html')
 
 
     # def test_cv_page_returns_correct_html(self):
