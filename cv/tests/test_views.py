@@ -19,7 +19,7 @@ class TestViews(TestCase):
     def test_cv_section_list_GET(self):
         response=self.client.get(self.cv_section_list_url)
         self.assertEquals(response.status_code,200)
-        self.assertTemplateUsed(response,'cv/cv_section_list.html')
+        self.assertTemplateUsed(response,'cv/cv_sections_list.html')
 
     # def test_cv_page_returns_correct_html(self):
     #     response = self.client.get('/cv/')
