@@ -1,4 +1,4 @@
-from django.test import TestCase
+from django.test i e
 from django.urls import reverse,resolve
 from cv.views import cv_section_list,cv_section_detail
 from cv.models import Cv_section
@@ -14,3 +14,7 @@ class TestUrls(TestCase):
     def test_cv_section_detail_url_resolveded(self):
         url=reverse('cv_section_detail',args=[1])
         self.assertEqual(resolve(url).func,cv_section_detail)
+        
+    def test_cv_section_new_url_resolveded(self):
+        url=reverse('cv_section_new')
+        self.assertEqual(resolve(url).func,cv_section_new)
