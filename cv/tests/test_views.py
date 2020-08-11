@@ -17,11 +17,6 @@ class TestViews(TestCase):
         text='my text'
         )
 
-
-    def test_url_resolves_to_cv_page_view(self):
-        found = resolve('/cv/')
-        self.assertEqual(found.func, cv_section_list)
-
     def test_cv_section_list_GET(self):
         response=self.client.get(self.cv_section_list_url)
         self.assertEquals(response.status_code,200)
