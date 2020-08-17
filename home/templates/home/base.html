@@ -1,76 +1,91 @@
 {% load static %}
 <html>
     <head>
-        <title>Contacts</title>
+        <title>My page</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/home.css' %}">
     </head>
     <body>
-      <div class="page-header">
-        <hr>
-          <h3>
-            <a class="highlighted" href="/"> |Home</a>
-            <a  href="/blog/"  > |Personal Blog </a>
-            <a href="/cv/" >|Curriculum Vitae(CV) | </a>
-            <a href="/admin/"  >Login as Admin | </a>
-          </h3>
-        <hr>
-      </div>
-      <div class="nav_right">
+    <header>
+    <div class="menu-sidebar menu-bar-block menu-card menu-animate-left" style="display:none" id="mySidebar">
+      <button class="menu-bar-item menu-button menu-large"onclick="menu_close()">Close &times;</button>
+
         <nav>
         <a href="/"> Home</a>
         </nav>
         <nav>
-       <a href="/about/" > About </a>
+        <a href="/about/" > About </a>
         </nav>
         <nav>
         <a href="/contact/" > Contact </a>
         </nav>
-      </div>
 
-      <div id="sidebar">
-        <div class="toggle-btn" onclick="toggleSidebar()">
-          <span></span>
-          <span></span>
-          <span></span>
+     </div>
+   </header>
+      <div id="main">
+
+        <div class="menu-teal">
+         <button id="openNav" class="menu-button menu-teal menu-xlarge" onclick="menu_open()">&#9776;</button>
+         <div class="menu-container">
+             <h3>
+               <a  href="/"> |Home</a>
+               <a  href="/blog/"  > |Personal Blog </a>
+               <a href="/cv/" >|Curriculum Vitae(CV) | </a>
+               <a href="/admin/"  >Login as Admin | </a>
+             </h3>
+           <hr>
+         </div>
         </div>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contacts</li>
-        </ul>
+      </div>
+      <div class="nav_left">
+        <nav>
+        <a href="/"> Home</a>
+        </nav>
+        <nav>
+       <a href="#" > Comments </a>
+        </nav>
+        <nav>
+        <a href="#" > Frequently asked questions </a>
+        </nav>
+      </div>
+      <div class="nav_right">
 
+    <p>Follow me on:</p>
+
+        <nav>
+       <a href="#" > Twitter </a>
+        </nav>
+        <nav>
+        <a href="#" > Facebook </a>
+        </nav>
+        <nav>
+        <a href="#" > Youtube </a>
+        </nav>
       </div>
 
       <div class="content">
 
        <div class="content container">
-               {% block content %}
-               {% endblock %}
-       </div>
+        {% block content %}
 
-      <div class="foot">
-        <footer id="footer">
-          <h5>
-            <a class="highlighted" href="/"> Home |</a>
-            <a href="/blog/"> Personal Blog |  </a>
-            <a href="/cv/">Curriculum Vitae(CV) |</a>
-            <a href="/admin/">Login as Admin </a>
-          </h5>
-          Copyright &copy;
-          <script type="text/JavaScript">
-          document.write(new Date().getFullYear());
-          </script> My Website
-         </footer>
-
-       </div>
-         </div>
+       {% endblock %}
+        </div>
+      </div>
          <script type="text/javascript">
-           function toggleSidebar() {
-             document.getElementById("sidebar").classList.toggle('active');
-           }
+        function menu_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function menu_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+
          </script>
     </body>
 </html>

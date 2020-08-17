@@ -4,7 +4,15 @@
     padding: 20px 20px 0px 40px;
      text-align: center;
 }
-
+.footer {
+   position: fixed;
+   margin-top: 10px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   border-top: thin solid #BBBBBB;
+   text-align: center;
+}
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #000000;
     font-size: 36pt;
