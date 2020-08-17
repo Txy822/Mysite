@@ -10,12 +10,69 @@
     text-decoration: none;
     text-align: center;
 }
+.content {
+  float :left;
+  /* background-color: gray; */
+  width:50%;
+  height:280px;
 
+}
+.nav_right {
+  float :right;
+  /* background-color: red; */
+  width:10%;
+  height:280px;
+  padding: 10px;
+  font-size: 14pt;
+  color: blue;
+  text-decoration: underline;
+}
+.toggle-btn {
+
+}
+. {
+  margin:0px;
+  padding: 0px;
+  font-family: sans-serif;
+
+}
+#sidebar {
+  position: fixed;
+  width:200px
+  height:100%
+  left: -200px;
+  transition: all 500ms linear;
+}
+#sidebar .active {
+  left: 0px;
+
+}
+#sidebar ui li {
+  color: red;
+  list-style: none;
+  padding: 15px 10px ;
+  border-bottom: 1px solid blue;
+}
 .content {
     margin-left: 40px;
 }
 .highlighted{
     color: blue;
+ }
+ #sidebar .toggle-btn {
+   position: absolute;
+   left: 230px ;
+   top: 20px;
+
+ }
+ #sidebar .toggle-btn span {
+   display: block;
+   width: 30px;
+   height:5px;
+   background: black;
+   margin: 3px 0px
+
+
  }
 body {
     padding-left: 15px;

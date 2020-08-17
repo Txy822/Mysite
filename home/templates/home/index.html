@@ -1,23 +1,6 @@
-{% load static %}
-<html>
-    <head>
-        <title>Home</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    </head>
-    <body>
-      <div class="page-header">
-        <hr>
-          <h3>
-            <a class="highlighted" href="/"> |Home</a>
-            <a  href="/blog/"  > |Personal Blog </a>
-            <a href="/cv/" >|Curriculum Vitae(CV) | </a>
-            <a href="/admin/"  >Login as Admin | </a>
-          </h3>
-        <hr>
-      </div>
+{% extends 'home/base.html' %}
+{% block content %}
+
       <div class="content_one">
         <h1>Well Come to My world</h1>
         <h3>My name is Tesfahun Yohanis</h3>
@@ -31,22 +14,11 @@
       <div class=" content_two">
         <h3>I also born not in sea!!!</h3>
       </div>
+      <div class="">
+
+
       <video class ="video" width="600" length="400" controls poster="static/images/poster.jpg">
          <source src="static/videos/video.mp4" type="video/mp4">
       </video>
-      <div class="foot">
-        <footer id="footer">
-          <h5>
-            <a class="highlighted" href="/"> Home |</a>
-            <a href="/blog/"> Personal Blog |  </a>
-            <a href="/cv/">Curriculum Vitae(CV) |</a>
-            <a href="/admin/">Login as Admin </a>
-          </h5>
-          Copyright &copy;
-          <script type="text/JavaScript">
-          document.write(new Date().getFullYear());
-          </script> My Website
-         </footer>
-       </div>
-    </body>
-</html>
+    </div>
+  {% endblock %}
