@@ -3,7 +3,6 @@
 {% block content %}
     {% for cv in cv_sections %}
         <div class="cv">
-
             <h2><a href="{% url 'cv_section_detail' pk=cv.pk %}">{{ cv.title }}</a></h2>
             <p>{{ cv.snippet|linebreaksbr }}
               <a href="{% url 'cv_section_detail' pk=cv.pk %}">Read More</a>

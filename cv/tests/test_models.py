@@ -9,7 +9,6 @@ class CvSectionModelTest(TestCase):
         # Set up non-modified objects used by all test methods
         Cv_section.objects.create(title='title1', text='this is sample text1')
         Cv_section.objects.create(title='title1', text='this is sample text1')
-        # self.cv_section_new_url=reverse('cv_section_new')
 
     def test_title_name_label(self):
         cv_section = Cv_section.objects.get(id=1)

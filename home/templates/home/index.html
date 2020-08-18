@@ -1,36 +1,30 @@
 {% extends 'home/base.html' %}
 {% block content %}
 
-      <div class="content_one">
-        <h1>Well Come!</h1>
-        <h3>My name is Tesfahun Yohanis-Wolleli</h3>
-        <p>
-          In case you would like to have a look at my:
-          <p>  <a href="/blog/">My Blog </a></p>
-          <p> or   <a href="/cv/">My Curriculum Vitae</a></p>
-        </p>
-
-      </div>
-      <div class="">
-
-
+    <div class="content_one">
+      <h1>Well Come!</h1>
+      <h3>My name is Tesfahun Yohanis-Wolleli</h3>
+        <p>In case you would like to have a look at my:</p>
+        <p>  <a href="/blog/">My Blog </a></p>
+        <p> or   <a href="/cv/">My Curriculum Vitae</a></p>
+    </div>
+    <div class="">
       <video class ="video" width="600" length="400" controls poster="static/images/poster.jpg">
          <source src="static/videos/video.mp4" type="video/mp4">
       </video>
     </div>
 
-
-<div class="footer">
-<div class="">
-  <a class="highlighted" href="/"> Home |</a>
-  <a href="/blog/"> My Blog  |  </a>
-  <a href="/cv/">Curriculum Vitae(CV) </a>
-</div>
-<div class="">
-  Copyright &copy;
-  <script type="text/JavaScript">
-  document.write(new Date().getFullYear());
-  </script> Home
-</div>
-</div>
+    <div class="footer">
+      <div class="">
+        <a class="highlighted" href="/"> Home |</a>
+        <a href="/blog/"> My Blog  |  </a>
+        <a href="/cv/">Curriculum Vitae(CV) </a>
+      </div>
+      <div class="">
+        Copyright &copy;
+        <script type="text/JavaScript">
+        document.write(new Date().getFullYear());
+        </script> Home
+      </div>
+    </div>
   {% endblock %}

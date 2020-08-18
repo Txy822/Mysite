@@ -47,12 +47,3 @@ class TestViews(TestCase):
     def test_cv_section_remove_GET(self):
         response=self.client.get(self.cv_section_remove_url)
         self.assertEquals(response.status_code,302)
-
-    # def test_cv_page_returns_correct_html(self):
-    #     response = self.client.get('/cv/')
-    #     html = response.content.decode('utf8')
-    #     self.assertTrue(html.strip().startswith('<html>'))
-    #     self.assertIn('<title>Tesfahun Curriculum Vitae</title>', html)
-    #     self.assertTrue(html.strip().endswith('</html>'))
-    #     expected_html = render_to_string('cv/cv_sections_list.html')
-    #     self.assertEqual(html, expected_html)

@@ -3,11 +3,6 @@ from selenium import webdriver
 import unittest
 
 class FunctionalTestCase(LiveServerTestCase):
-    #set up data for class based elements
-    @classmethod
-    def setUpTestData(cls):
-        #print("setUpTestData: Run once to set up non-modified data for all class methods.")
-        pass
 
     #set up  is going to run before each method
     def setUp(self):
@@ -32,16 +27,9 @@ class FunctionalTestCase(LiveServerTestCase):
         self.browser.get('%s%s' % (self.live_server_url, '/cv/'))
         self.assertIn('Tesfahun Curriculum Vitae',self.browser.title)
 
-    # She is invited to enter a to-do item straight away
-    #when he click each section he can read more
-    # He checked each sections of cv like Experiance, Education background and others
-
+    # When he clicked each section of cv he can see the cv section in detail
     # He clicked the Curriculum Vitae icon and he goes back.
-
-    # The page updates again, and now shows both items on her list
-
     # When he hit personal blog he can see the blog posts as well.
-
     # He gets  more works about the employee
     # He get back to other office works
     #tear down  is going to run after  each method

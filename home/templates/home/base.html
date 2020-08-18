@@ -8,74 +8,73 @@
         <link rel="stylesheet" href="{% static 'css/home.css' %}">
     </head>
     <body>
-    <header>
-    <div class="menu-sidebar menu-bar-block menu-card menu-animate-left" style="display:none" id="mySidebar">
-      <button class="menu-bar-item menu-button menu-large"onclick="menu_close()">Close &times;</button>
+      
+        <header>
+            <div class="menu-sidebar menu-bar-block menu-card menu-animate-left" style="display:none" id="mySidebar">
+              <button class="menu-bar-item menu-button menu-large"onclick="menu_close()">Close &times;</button>
+                <nav>
+                    <a href="/"> Home</a>
+                </nav>
+                <nav>
+                    <a href="/about/" > About </a>
+                </nav>
+                <nav>
+                    <a href="/contact/" > Contact </a>
+                </nav>
+             </div>
+        </header>
 
-        <nav>
-        <a href="/"> Home</a>
-        </nav>
-        <nav>
-        <a href="/about/" > About </a>
-        </nav>
-        <nav>
-        <a href="/contact/" > Contact </a>
-        </nav>
-
-     </div>
-   </header>
-      <div id="main">
-
-        <div class="menu-teal">
-         <button id="openNav" class="menu-button menu-teal menu-xlarge" onclick="menu_open()">&#9776;</button>
-         <div class="menu-container">
-             <h3>
-               <a  href="/"> Home</a>
-               <a  href="/blog/"  > |My Blog </a>
-               <a href="/cv/" >|Curriculum Vitae(CV)</a>
-             </h3>
-           <hr>
-         </div>
+        <div id="main">
+            <div class="menu-teal">
+             <button id="openNav" class="menu-button menu-teal menu-xlarge" onclick="menu_open()">&#9776;</button>
+             <div class="menu-container">
+                 <h3>
+                   <a  href="/"> Home</a>
+                   <a  href="/blog/"  > |My Blog </a>
+                   <a href="/cv/" >|Curriculum Vitae(CV)</a>
+                 </h3>
+               <hr>
+             </div>
+            </div>
         </div>
-      </div>
-      <div class="nav_left">
-      </div>
-      <div class="nav_right">
 
-    <p>Follow me on:</p>
-
-        <nav>
-       <a href="#" > Twitter </a>
-        </nav>
-        <nav>
-        <a href="#" > Facebook </a>
-        </nav>
-        <nav>
-        <a href="#" > Youtube </a>
-        </nav>
-      </div>
-
-      <div class="content">
-
-       <div class="content container">
-        {% block content %}
-
-       {% endblock %}
+        <div class="nav_left">
         </div>
-      </div>
-         <script type="text/javascript">
-        function menu_open() {
-          document.getElementById("main").style.marginLeft = "25%";
-          document.getElementById("mySidebar").style.width = "25%";
-          document.getElementById("mySidebar").style.display = "block";
-          document.getElementById("openNav").style.display = 'none';
-        }
-        function menu_close() {
-          document.getElementById("main").style.marginLeft = "0%";
-          document.getElementById("mySidebar").style.display = "none";
-          document.getElementById("openNav").style.display = "inline-block";
-        }
 
+        <div class="nav_right">
+          <p>Follow me on:</p>
+          <nav>
+            <a href="#" > Twitter </a>
+          </nav>
+          <nav>
+            <a href="#" > Facebook </a>
+          </nav>
+          <nav>
+            <a href="#" > Youtube </a>
+          </nav>
+        </div>
+
+        <div class="content">
+          <div class="content container">
+            {% block content %}
+
+            {% endblock %}
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          function menu_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+          }
+          function menu_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+          }
          </script>
+
     </body>
 </html>
