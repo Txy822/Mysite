@@ -101,15 +101,6 @@ p {
    font-size: 13px
 }
 
-
-/* .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
-} */
-
-
 video {
   display: block;
   margin: auto;
@@ -118,15 +109,4 @@ video {
 }
 h1 {
    color: #270c39;
-}
-#footer {
-   text-align: center;
-   font-size: 0.8em;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   /* background-color: #FFFFFF; */
-   border-top: thin solid #BBBBBB;
-   clear: both;
-   /* color: #969696; */
-   /* background-color: gray */
 }

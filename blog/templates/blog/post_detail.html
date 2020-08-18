@@ -30,8 +30,9 @@
                 <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
             {% endif %}
         </div>
-        <strong>{{ comment.author }}</strong>
+        <strong>{{ comment.name }}</strong>
         <p>{{ comment.text|linebreaks }}</p>
+        <p>{{ comment.email|linebreaks }}</p>
     </div>
     {% endif %}
 {% empty %}

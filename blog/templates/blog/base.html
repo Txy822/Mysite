@@ -15,17 +15,15 @@
             <a href="{% url 'post_new' %}" target="_blank" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             <a href="{% url 'post_draft_list' %}" target="_blank" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
             <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-    
+
           {% else %}
             <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
           {% endif %}
-          <hr>
-          <h1><a href="/" target="_blank">Personal Blogs</a></h1>
+          <h1><a href="/" target="_blank">My Blog</a></h1>
             <h3>
               <a href="/"> Home</a>
-              <a class="highlighted" href="/blog/" > |Personal Blog </a>
-              <a href="/cv/" >|Curriculum Vitae(CV) | </a>
-              <a href="/admin/"  >Login as Admin  </a>
+              <a class="highlighted" href="/blog/" > |My Blog  </a>
+              <a href="/cv/" >|Curriculum Vitae(CV) </a>
            </h3>
            <hr>
         </div>
@@ -36,9 +34,8 @@
         <div class="footer">
         <div class="">
           <a href="/"> Home |</a>
-          <a class="highlighted"  href="/blog/"> Personal Blog |  </a>
-          <a href="/cv/">Curriculum Vitae(CV) |</a>
-          <a href="/admin/">Login as Admin </a>
+          <a class="highlighted"  href="/blog/"> My Blog  |  </a>
+          <a href="/cv/">Curriculum Vitae(CV) </a>
         </div>
         <div class="">
           Copyright &copy;
@@ -47,19 +44,5 @@
           </script> My Blog
         </div>
         </div>
-        <!-- <div class="">
-          <footer id="footer">
-            <h5>
-              <a href="/"> Home |</a>
-              <a class="highlighted"  href="/blog/"> Personal Blog |  </a>
-              <a href="/cv/">    Curriculum Vitae(CV) |   </a>
-              <a href="/admin/">Login as Admin </a>
-            </h5>
-            Copyright &copy;
-            <script type="text/JavaScript">
-              document.write(new Date().getFullYear());
-            </script> My Blog
-          </footer>
-        </div> -->
     </body>
 </html>
