@@ -1,3 +1,3 @@
-# my-first-project
+# my web page
 
-This is about web app development as abeginner. 
+This web page used for bloging and my cv.
