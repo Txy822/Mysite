@@ -28,6 +28,8 @@ DEBUG = True
 #ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com','http://localhost:8000','563ae936.ngrok.io', 'localhost', '127.0.0.1', 'testserver']
 
+#login redirect to home page
+LOGIN_REDIRECT_URL = '/'
 
 # Application definition
 

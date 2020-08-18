@@ -9,8 +9,11 @@
             </div>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.snippet|linebreaksbr }}
-            <a href="{% url 'post_detail' pk=post.pk %}" >Read More</a>
+             <a href="{% url 'post_detail' pk=post.pk %}" >Read More</a>
             </p>
+             <!-- <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a> -->
+             <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+
         </div>
     {% endfor %}
 {% endblock %}
