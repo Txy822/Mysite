@@ -1,16 +1,4 @@
-.page-header {
-    background-color: #5D564E;
-    margin-top: 0;
-    padding: 20px 20px 0px 40px;
-     text-align: center;
-}
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #000000;
-    font-size: 36pt;
-    text-decoration: none;
-     text-align: center;
-}
 .highlighted{
 
     color: blue;
@@ -18,6 +6,7 @@
 
 .content {
     margin-left: 200px;
+    margin-right: 200px;
 
 }
 
@@ -25,8 +14,9 @@ h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
 
 }
-h1 a, h2 a {
+h1 a, h2 a h3 a{
     color: #C25100;
+    text-align: center;
 }
 
 .date {
@@ -38,7 +28,7 @@ h1 a, h2 a {
 }
 
 .post-form textarea, .post-form input {
-    width: 100%;
+    width: 50%;
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
@@ -46,6 +36,9 @@ h1 a, h2 a {
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+}
+.menu-container  {
+  text-align: center;
 }
 
 .post {
@@ -55,21 +48,20 @@ h1 a, h2 a {
 .post h2 a, .post h2 a:visited {
     color: #000000;
 }
-@charset "utf-8";
-#header {
-    border-style: none;
-    width: 800px;
-    height: auto;
-}
 body {
    background-color: #E0E0E0;
    font-family: "Trebuchet MS", Helvetica, sans-serif;
+   padding-left: 15px;
    font-size: 1.50em;
    text-align: justify;
    color: #474747;
 }
 h1 {
    color: #270c39;
+    text-align: center;
+}
+h3{
+  text-align: center;
 }
 
 .footer {
@@ -78,10 +70,60 @@ h1 {
    left: 0;
    bottom: 0;
    width: 100%;
-   border-top: thin solid #BBBBBB;
+   /* border-top: thin solid #BBBBBB; */
    text-align: center;
 }
 
 .comment {
     margin: 20px 0px 20px 20px;
+}
+.menu-btn,.menu-button{
+  border:none;
+  display:inline-block;
+  padding:10px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap
+}
+/* .menu-main,#main{
+  transition:margin-left .4s
+} */
+.menu-teal{
+  color:#fff!important;
+  background-color:#000!important
+
+}
+.menu-sidebar{
+  height:100%;
+  width:100px;
+  background-color:#bfd0da;
+  position:fixed!important;
+  z-index:1;
+  overflow:auto
+}
+
+.nav_right {
+  float :right;
+  background-color: #bfd0da;
+  width:10%;
+  height:646px;
+  padding: 10px;
+  font-size: 14pt;
+  color: blue;
+  text-decoration: underline;
+}
+.nav_left {
+  float :left;
+  background-color:#44553c ;
+  width:10%;
+  height:646px;
+  padding: 10px;
+  font-size: 14pt;
+  color: blue;
+  text-decoration: underline;
 }

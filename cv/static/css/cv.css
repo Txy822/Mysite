@@ -12,15 +12,20 @@
     text-decoration: none;
      text-align: center;
 }
+
 .highlighted {
 
     color: blue;
  }
+
 .content_container {
-    margin-left: 150px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
+
 body {
     font-size: 15px;
+    padding-left: 15px;
 
 }
 
@@ -31,8 +36,11 @@ h1, h2, h3, h4 {
 h1 a, h2 a {
     color: #C25100;
 }
+
 .cv-form textarea, .cv-form input {
-    width: 100%;
+    width: 70%;
+    font-size: 13px;
+
     }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
@@ -44,6 +52,8 @@ h1 a, h2 a {
 
 .cv {
     margin-bottom: 70px;
+      margin-left: 200px;
+      margin-right: 200px;
     font-size: 15pt;
 }
 

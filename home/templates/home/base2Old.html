@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 {% load static %}
 <html>
     <head>
@@ -10,24 +9,25 @@
     </head>
     <body>
 
-      <div class="menu-sidebar" style="display:none" id="mySidebar">
-         <button class=""onclick="menu_close()">Close &times;</button>
-           <nav>
-               <a href="/"> Home</a>
-           </nav>
-           <nav>
-               <a href="/about/" > About </a>
-           </nav>
-           <nav>
-              <a href="/contact/" > Contact </a>
-           </nav>
-        </div>
+        <header>
+            <div class="menu-sidebar menu-bar-block menu-card menu-animate-left" style="display:none" id="mySidebar">
+              <button class="menu-bar-item menu-button menu-large"onclick="menu_close()">Close &times;</button>
+                <nav>
+                    <a href="/"> Home</a>
+                </nav>
+                <nav>
+                    <a href="/about/" > About </a>
+                </nav>
+                <nav>
+                    <a href="/contact/" > Contact </a>
+                </nav>
+             </div>
+        </header>
 
         <div id="main">
             <div class="menu-teal">
-             <button id="openNav" class="menu-button" onclick="menu_open()">&#9776;</button>
+             <button id="openNav" class="menu-button menu-teal menu-xlarge" onclick="menu_open()">&#9776;</button>
              <div class="menu-container">
-               <h1><a href="/">My Page</a></h1>
                  <h3>
                    <a class="highlighted" href="/"> Home</a>
                    <a  href="/blog/"  > |My Blog </a>
@@ -39,15 +39,6 @@
         </div>
 
         <div class="nav_left">
-          <nav>
-              <a href="/"> Home</a>
-          </nav>
-          <nav>
-              <a href="/about/" > About </a>
-          </nav>
-          <nav>
-              <a href="/contact/" > Contact </a>
-          </nav>
         </div>
 
         <div class="nav_right">
@@ -59,15 +50,12 @@
             <a href="#" > Facebook </a>
           </nav>
           <nav>
-            <a href="#" > Instagram </a>
-          </nav>
-          <nav>
             <a href="#" > Youtube </a>
           </nav>
         </div>
 
-        <div class="content-container">
-          <div class="">
+        <div class="content">
+          <div class="content container">
             {% block content %}
 
             {% endblock %}

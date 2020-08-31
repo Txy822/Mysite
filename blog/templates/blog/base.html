@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html>
     <head>
         <title>Tesfahun blog</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -10,24 +10,70 @@
         <link rel="icon" type="image/JPG" href="{% static 'css/favicon.JPG' %}">
     </head>
     <body>
-        <div class="page-header">
-          {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" target="_blank" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            <a href="{% url 'post_draft_list' %}" target="_blank" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-            <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
 
-          {% else %}
-            <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-          {% endif %}
-          <h1><a href="/" target="_blank">My Blog</a></h1>
-            <h3>
+      <div class="menu-sidebar" style="display:none" id="mySidebar">
+        <button class=""onclick="menu_close()">Close &times;</button>
+          <nav>
               <a href="/"> Home</a>
-              <a class="highlighted" href="/blog/" > |My Blog  </a>
-              <a href="/cv/" >|Curriculum Vitae(CV) </a>
-           </h3>
-           <hr>
+          </nav>
+          <nav>
+              <a href="/about/" > About </a>
+          </nav>
+          <nav>
+              <a href="/contact/" > Contact </a>
+          </nav>
+       </div>
+
+        <div id="main">
+            <div class="menu-teal">
+             <button id="openNav" class="menu-button" onclick="menu_open()">&#9776;</button>
+               {% if user.is_authenticated %}
+                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                 <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+                 <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+
+               {% else %}
+                 <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+               {% endif %}
+               <h1><a href="/blog">My Blog</a></h1>
+                 <h3>
+                   <a  href="/"> Home</a>
+                   <a  class="highlighted" href="/blog/"  > |My Blog </a>
+                   <a href="/cv/" >|Curriculum Vitae(CV)</a>
+                 </h3>
+               <hr>
+            </div>
         </div>
-        <div class="content container">
+
+        <div class="nav_left">
+          <nav>
+              <a href="/"> Home</a>
+          </nav>
+          <nav>
+              <a href="/about/" > About </a>
+          </nav>
+          <nav>
+              <a href="/contact/" > Contact </a>
+          </nav>
+        </div>
+
+        <div class="nav_right">
+          <p>Follow me on:</p>
+          <nav>
+            <a href="#" > Twitter </a>
+          </nav>
+          <nav>
+            <a href="#" > Facebook </a>
+          </nav>
+          <nav>
+            <a href="#" > Instagram </a>
+          </nav>
+          <nav>
+            <a href="#" > Youtube </a>
+          </nav>
+        </div>
+
+        <div class="content">
                 {% block content %}
                 {% endblock %}
         </div>
@@ -44,5 +90,19 @@
           </script> My Blog
         </div>
         </div>
+        <script type="text/javascript">
+        function menu_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function menu_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+       </script>
+
     </body>
 </html>
